@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -9,7 +8,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   }, []);
-  return <p>{message}</p>;
+  return <p className="p-6">{message}</p>;
 }
 
 export default App;
